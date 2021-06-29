@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Js Quiz</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+	<script src="./script/main.js" defer"></script>
+	<style>
+		body {
+			font-family: 'Open Sans', sans-serif;
+		}
+		.quiz-box {
+			max-width: 600px;
+			margin: 200px auto;
+			box-shadow: -1px -1px 5px 2px rgba(0,0,0,0.44);
+			-webkit-box-shadow: -1px -1px 5px 2px rgba(0,0,0,0.44);
+			-moz-box-shadow: -1px -1px 5px 2px rgba(0,0,0,0.44);
+			padding-bottom: 30px;
+		}
+
+		.question-block {
+			display: none;
+		}
+
+		.question-block.active {
+			display: block;
+			padding: 20px;
+		}
+
+		.title {
+			background: #7952b3;
+			color: #fff;
+			text-align: center;
+			font-size: 30px;
+			padding: 20px 0;
+		}
+
+		.question-block .answers label {
+			display: block;
+			margin-bottom: 10px;
+		}
+
+		.question {
+			margin-bottom: 15px;
+		}
+
+		.nav-links {
+			text-align: center;
+		}
+
+		.nav-links button {
+			cursor: pointer;
+			margin: 0 15px;
+			width: 100px;
+			color: #fff;
+			background-color: #6c757d;
+			border-color: #6c757d;
+			display: inline-block;
+			font-weight: 400;
+			text-align: center;
+			white-space: nowrap;
+			vertical-align: middle;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+			border: 1px solid transparent;
+			padding: .375rem .75rem;
+			font-size: 1rem;
+			line-height: 1.5;
+			border-radius: .25rem;
+			transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+		}
+
+		#results .result-content {
+			background: #ffc107;
+			padding: 30px;
+			color: #212529;
+			font-size: 30px;
+			text-align: center;
+		}
+
+		.sbtn {
+			text-align: center;
+			display: none;
+		}
+
+		.nav-links.hide {
+			display: none;
+		}
+
+		.sbtn.show {
+			display: block;
+		}
+
+		.sbtn button {
+			cursor: pointer;
+			margin: 30px 15px;
+			color: #fff;
+			background-color: #28a745;
+			border-color: #28a745;
+			display: inline-block;
+			font-weight: 400;
+			text-align: center;
+			white-space: nowrap;
+			vertical-align: middle;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+			border: 1px solid transparent;
+			padding: .375rem .75rem;
+			font-size: 1rem;
+			line-height: 1.5;
+			border-radius: .25rem;
+			transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="quiz-box">
+		<div class="title">QUIZ</div>
+		<div id="quiz"></div>
+		<div class="nav-links">
+			<button id="prev">previous</button>
+			<button id="next">Next</button>
+		</div>
+		<div class="sbtn">
+			<button id="submit">Submit Quiz</button>
+		</div>
+		<div id="results"></div>
+	</div>	
+</body>
+</html>
